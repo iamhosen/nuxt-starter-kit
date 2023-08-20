@@ -6,4 +6,11 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     '@pinia/nuxt',
   ],
+
+  runtimeConfig: {
+    public: {
+      apiBaseUrl: process.env.API_BASE_URL,
+      apiPrefix: process.env.API_PREFIX,
+    }
+  },
 })
