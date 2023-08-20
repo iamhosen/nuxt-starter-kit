@@ -1,0 +1,64 @@
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/Thin.woff');
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/Light.woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/Regular.woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/Medium.woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/Bold.woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/ExtraBold.woff');
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: IranYekan;
+    src: url('../fonts/IranYekan/Black.woff');
+    font-weight: 900;
+}
+
+
+body {
+    font-family: 'YekanBakh', 'Segoe UI';
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
