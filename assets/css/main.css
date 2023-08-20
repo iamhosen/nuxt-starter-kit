@@ -12,7 +12,7 @@
 
 @font-face {
     font-family: 'IRANYekan';
-    src: url('../fonts/Regular.woff');
+    src: url('../fonts/IranYekan/Regular.woff');
     font-weight: 400;
 }
 
@@ -44,6 +44,7 @@
 html {
     font-family: 'IRANYekan', sans-serif;
     direction: rtl;
+    background-color: #F9F9FB;
 }
 
 .ltr {
