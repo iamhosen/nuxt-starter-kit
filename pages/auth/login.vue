@@ -107,9 +107,9 @@
 </template>
 
 <script setup>
-const email = ref("");
+const email = ref('');
 const emailError = ref(null);
-const password = ref("");
+const password = ref('');
 const passwordError = ref(null);
 const remember = ref(false);
 

@@ -1,6 +1,7 @@
-/** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
-module.exports = {
+import type { Config } from 'tailwindcss';
+import colors from 'tailwindcss/colors';
+
+export default <Partial<Config>>{
   content: [],
   theme: {
     extend: {},
@@ -31,8 +32,7 @@ module.exports = {
       blue: colors.blue,
       purple: colors.purple,
       pink: colors.pink,
-    }
+    },
   },
   plugins: [],
-}
-
+};

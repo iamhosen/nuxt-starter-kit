@@ -1,7 +1,7 @@
 <template>
-    <div class="loading-container" v-if="loading">
-        <span class="loader"></span>
-    </div>
+  <div class="loading-container" v-if="loading">
+    <span class="loader"></span>
+  </div>
 </template>
 
 <script setup>
@@ -26,7 +26,9 @@ defineProps({
   align-items: center;
   justify-content: center;
 }
-.loader, .loader:before, .loader:after {
+.loader,
+.loader:before,
+.loader:after {
   border-radius: 50%;
   width: 2.5em;
   height: 2.5em;
@@ -34,7 +36,7 @@ defineProps({
   animation: bblFadInOut 1.8s infinite ease-in-out;
 }
 .loader {
-  color: #FFF;
+  color: #fff;
   font-size: 7px;
   position: relative;
   text-indent: -9999em;
@@ -56,8 +58,13 @@ defineProps({
 }
 
 @keyframes bblFadInOut {
-  0%, 80%, 100% { box-shadow: 0 2.5em 0 -1.3em }
-  40% { box-shadow: 0 2.5em 0 0 }
+  0%,
+  80%,
+  100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
 }
-    
 </style>

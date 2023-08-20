@@ -1,4 +1,4 @@
-import { useAuthStore } from "@/stores/auth";
+import { useAuthStore } from '@/stores/auth';
 
 // export const authLogin = async (data: { phone: string, password: string }) => {
 //   await useNuxtApp().$api.auth

@@ -6,6 +6,6 @@
 </template>
 
 <script setup>
-import { useMainStore } from "@/stores/index";
+import { useMainStore } from '@/stores/index';
 const loading = computed(() => useMainStore().isLoading);
 </script>

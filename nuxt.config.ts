@@ -4,15 +4,12 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@pinia/nuxt',
-  ],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxtjs/eslint-module'],
 
   runtimeConfig: {
     public: {
       apiBaseUrl: process.env.API_BASE_URL,
       apiPrefix: process.env.API_PREFIX,
-    }
+    },
   },
-})
+});

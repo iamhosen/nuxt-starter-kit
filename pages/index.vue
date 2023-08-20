@@ -1,5 +1,6 @@
 <template>
   <section class="py-8 flex flex-col justify-center gap-6">
+    <h3 class="mx-auto">استارتر کیت</h3>
     <h1 class="text-4xl font-bold text-center">
       Welcome to Nuxt Dashboard Starter Kit
     </h1>
@@ -10,5 +11,4 @@
   </section>
 </template>
 
-<script setup>
-</script>
+<script setup></script>

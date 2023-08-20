@@ -116,13 +116,13 @@
     </div>
   </div>
 </template>
-  
+
 <script setup>
-const email = ref("");
+const email = ref('');
 const emailError = ref();
-const password = ref("");
+const password = ref('');
 const passwordError = ref();
-const password_confirmation = ref("");
+const password_confirmation = ref('');
 const terms = ref(false);
 
 const { validateEmail, validatePasswordWithConfirmation } = useValidation();
