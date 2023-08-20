@@ -1,7 +1,7 @@
 import 'vue-toast-notification/dist/theme-default.css';
 import { useToast } from 'vue-toast-notification';
 import { useMainStore } from '@/stores/index';
-// import { useAuthStore } from "@/stores/auth";
+import { useAuthStore } from "@/stores/auth";
 import { UseFetchOptions } from 'nuxt/app';
 
 
@@ -45,11 +45,11 @@ class HttpFactory {
                 ...extras
             }
 
-            // if (auth) {
-            //     options.headers.push(
-            //         ["Authorization", `Bearer ${useAuthStore().token || localStorage.getItem('token')}`]
-            //     )
-            // }
+            if (auth) {
+                options.headers.push(
+                    ["Authorization", `Bearer ${useAuthStore().token || localStorage.getItem('token')}`]
+                )
+            }
 
             if (Object.keys(body).length !== 0) {
                 options.body = body
