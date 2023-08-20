@@ -24,11 +24,11 @@
             type="email"
             name="email"
             id="email"
-            class="bg-gray-50 border focus:border-2 outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            class="bg-gray-50 border focus:border-2 outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-opacity-30"
             :class="
               !emailError
-                ? 'focus:ring-primary-100 focus:border-primary-500'
-                : 'ring-red-100 border-2 border-red-500'
+                ? 'focus:ring-primary-100 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500'
+                : 'ring-red-100 border-2 border-red-500 dark:focus:ring-red-600 dark:focus:border-red-500'
             "
             placeholder="name@company.com"
             required
@@ -49,11 +49,11 @@
             name="password"
             id="password"
             placeholder="••••••••"
-            class="bg-gray-50 border focus:border-2 outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+            class="bg-gray-50 border focus:border-2 outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-opacity-30"
             :class="
               !passwordError
-                ? 'focus:ring-primary-100 focus:border-primary-500'
-                : 'ring-red-100 border-2 border-red-500'
+                ? 'focus:ring-primary-100 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500'
+                : 'ring-red-100 border-2 border-red-500 dark:focus:ring-red-600 dark:focus:border-red-500'
             "
             required
           />
@@ -88,7 +88,8 @@
         </div>
         <button
           type="submit"
-          class="w-full px-5 py-3 text-base font-medium text-center text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
+          :disabled="emailError || passwordError"
+          class="disabled:opacity-50 disabled:cursor-not-allowed w-full px-5 py-3 text-base font-medium text-center text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
         >
           ورود به حساب
         </button>
@@ -106,34 +107,19 @@
 </template>
 
 <script setup>
-import {
-  password as validatePassword,
-  email as validateEmail,
-} from "@/helpers/validation";
-
 const email = ref("");
 const emailError = ref(null);
 const password = ref("");
 const passwordError = ref(null);
 const remember = ref(false);
 
-watch(email, (value) => {
-  const validate = validateEmail(value);
+const { validateEmail, validatePassword } = useValidation();
 
-  if (validate === true) {
-    emailError.value = null;
-  } else {
-    emailError.value = validate;
-  }
+watch(email, (value) => {
+  emailError.value = validateEmail(value);
 });
 watch(password, (value) => {
-  const validate = validatePassword(value);
-
-  if (validate === true) {
-    passwordError.value = null;
-  } else {
-    passwordError.value = validate;
-  }
+  passwordError.value = validatePassword(value);
 });
 
 const handleSubmit = () => {};
