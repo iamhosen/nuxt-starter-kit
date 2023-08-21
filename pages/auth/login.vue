@@ -107,6 +107,10 @@
 </template>
 
 <script setup lang="ts">
+definePageMeta({
+  layout: 'auth',
+});
+
 const email: Ref<string> = ref('');
 const emailError: Ref<string | null> = ref(null);
 const password: Ref<string> = ref('');
