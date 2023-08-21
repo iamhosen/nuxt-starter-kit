@@ -10,9 +10,15 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/tailwindcss": "^6.8.0",
     "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5"
+    "@typescript-eslint/parser": "^5.62.0",
+    "eslint": "^8.47.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "nuxt": "^3.6.5",
+    "typescript": "^5.1.6"
   },
   "dependencies": {
     "@headlessui/vue": "^1.7.16",

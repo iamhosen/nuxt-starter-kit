@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt', '@nuxtjs/eslint-module'],
+  modules: ['@nuxtjs/tailwindcss', '@pinia/nuxt'],
 
   runtimeConfig: {
     public: {

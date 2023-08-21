@@ -20,10 +20,10 @@
             >ایمیل</label
           >
           <input
+            id="email"
             v-model="email"
             type="email"
             name="email"
-            id="email"
             class="bg-gray-50 border focus:border-2 outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-opacity-30"
             :class="
               !emailError
@@ -44,10 +44,10 @@
             >رمز عبور</label
           >
           <input
+            id="password"
             v-model="password"
             type="password"
             name="password"
-            id="password"
             placeholder="••••••••"
             class="bg-gray-50 border focus:border-2 outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-opacity-30"
             :class="
@@ -68,10 +68,10 @@
             >تکرار رمز عبور</label
           >
           <input
-            v-model="password_confirmation"
+            id="password_confirmation"
+            v-model="passwordConfirmation"
             type="password"
             name="password_confirmation"
-            id="password_confirmation"
             placeholder="••••••••"
             class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
             required
@@ -80,8 +80,8 @@
         <div class="flex items-start">
           <div class="flex items-center h-5">
             <input
-              v-model="terms"
               id="remember"
+              v-model="terms"
               aria-describedby="remember"
               name="remember"
               type="checkbox"
@@ -99,7 +99,7 @@
         </div>
         <button
           type="submit"
-          :disabled="emailError || passwordError || !terms"
+          :disabled="!!(emailError || passwordError || !terms)"
           class="disabled:opacity-50 disabled:cursor-not-allowed w-full px-5 py-3 text-base font-medium text-center text-white bg-primary-600 rounded-lg hover:bg-primary-700 focus:ring-4 focus:ring-primary-300 dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800"
         >
           ساخت حساب جدید
@@ -117,12 +117,12 @@
   </div>
 </template>
 
-<script setup>
-const email = ref('');
-const emailError = ref();
-const password = ref('');
-const passwordError = ref();
-const password_confirmation = ref('');
+<script setup lang="ts">
+const email: Ref<string> = ref('');
+const emailError: Ref<string | null> = ref(null);
+const password: Ref<string> = ref('');
+const passwordError: Ref<string | null> = ref(null);
+const passwordConfirmation: Ref<string> = ref('');
 const terms = ref(false);
 
 const { validateEmail, validatePasswordWithConfirmation } = useValidation();
@@ -130,7 +130,7 @@ watch(email, (value) => {
   emailError.value = validateEmail(value);
 });
 
-watch([password, password_confirmation], (values) => {
+watch([password, passwordConfirmation], (values) => {
   passwordError.value = validatePasswordWithConfirmation(...values);
 });
 
