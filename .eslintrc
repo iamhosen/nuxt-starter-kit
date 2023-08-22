@@ -14,8 +14,16 @@
   ],
   "rules": {
     "no-console": "off",
-    "semi": ["error", "always"],
-    "quotes": ["error", "single"],
-    "vue/multi-word-component-names": ["off"]
+    "semi": [
+      "error",
+      "always"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "vue/multi-word-component-names": [
+      "off"
+    ]
   }
 }
