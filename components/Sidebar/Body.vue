@@ -1,7 +1,8 @@
 <template>
   <aside
     id="sidebar"
-    class="fixed top-0 right-0 z-20 flex-col flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
+    class="fixed top-0 z-20 flex-col flex-shrink-0 hidden w-64 h-full pt-16 font-normal duration-75 lg:flex transition-width"
+    :class="locale == 'fa' ? 'right-0' : 'left-0'"
     aria-label="Sidebar"
   >
     <div
@@ -17,10 +18,14 @@
     </div>
 
     <div
-      class="absolute bottom-0 left-0 justify-center hidden w-full p-4 space-x-4 bg-white lg:flex dark:bg-gray-800"
+      class="absolute bottom-0 left-0 flex gap-2 justify-center w-full p-4 bg-white dark:bg-gray-800"
       sidebar-bottom-menu
     >
       <slot name="footer" />
     </div>
   </aside>
 </template>
+
+<script lang="ts" setup>
+const { locale } = useI18n();
+</script>

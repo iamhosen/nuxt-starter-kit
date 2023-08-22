@@ -1,0 +1,22 @@
+{
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "users_list": "User List",
+    "data": "Data",
+    "add": "Add New",
+    "search": "Search",
+    "logo": "Starter Kit",
+    "auth": {
+        "login": "Login",
+        "register": "Register",
+        "forgot_password": "Forgot Password",
+        "reset_password": "Reset Password",
+        "email": "Email",
+        "password": "Password",
+        "confirm_password": "Confirm Password",
+        "remember_me": "Remember Me",
+        "not_registered": "Not Registered?",
+        "already_registered": "Already Registered?",
+        "terms_and_conditions": "Accept Terms and Conditions"
+    }
+}

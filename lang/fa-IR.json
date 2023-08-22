@@ -1,0 +1,22 @@
+{
+    "dashboard": "داشبورد",
+    "users": "کاربران",
+    "users_list": "لیست کاربران",
+    "data": "داده ها",
+    "add": "افزودن جدید",
+    "search": "جستجو",
+    "logo": "استارتر کیت",
+    "auth": {
+        "login": "ورود",
+        "register": "ثبت نام",
+        "forgot_password": "فراموشی رمز عبور",
+        "reset_password": "بازیابی رمز عبور",
+        "email": "ایمیل",
+        "password": "رمز عبور",
+        "confirm_password": "تایید رمز عبور",
+        "remember_me": "مرا به خاطر بسپار",
+        "not_registered": "ثبت نام نکرده اید؟",
+        "already_registered": "قبلا ثبت نام کرده اید؟",
+        "terms_and_conditions": "پذیرفتن شرایط و قوانین"
+    }
+}

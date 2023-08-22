@@ -5,19 +5,17 @@
     >
       <div class="flex flex-wrap justify-between items-center">
         <div class="flex justify-start items-center">
-          <a href="https://flowbite.com" class="flex ml-4">
-            <img src="/images/logo.svg" class="ml-3 h-8" alt="FlowBite Logo" />
-            <span
-              class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-              >استارتر کیت
-            </span>
-          </a>
+          <img src="/images/logo.svg" class="ml-3 h-8" />
+          <span
+            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+          >
+            {{ $t('logo') }}
+          </span>
         </div>
 
         <div class="flex gap-2 items-center lg:order-2">
           <!-- search -->
           <form action="#" method="GET" class="hidden lg:block lg:pl-2">
-            <label for="topbar-search" class="sr-only">Search</label>
             <div class="relative mt-1 lg:w-96">
               <div
                 class="flex absolute inset-y-0 left-0 items-center pl-3 pointer-events-none"
@@ -32,7 +30,7 @@
                 type="text"
                 name="email"
                 class="bg-gray-50 border focus:border outline-none focus:outline-none focus:ring-2 border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-opacity-30 focus:ring-primary-100 focus:border-primary-500 dark:focus:ring-primary-500 dark:focus:border-primary-500"
-                placeholder="جستجو"
+                :placeholder="$t('search')"
               />
             </div>
           </form>
@@ -42,7 +40,7 @@
             class="hidden sm:inline-flex items-center justify-center text-white bg-primary-600 hover:bg-primary-800 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-xs px-3 py-2.5 ml-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800"
           >
             <Icon name="uil:plus" size="1.5em" />
-            افزودن جدید
+            {{ $t('add') }}
           </nuxtLink>
           <!-- Search -->
           <button
