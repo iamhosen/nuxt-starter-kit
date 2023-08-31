@@ -21,8 +21,8 @@ Follow these steps to get the project up and running on your local machine:
 1. **Clone the Repository**: Start by cloning this repository to your local machine.
 
 ```bash
-   git clone https://github.com/your-username/nuxt3-starter-kit.git
-   cd nuxt3-starter-kit
+   git clone https://github.com/iamhosen/nuxt-starter-kit.git
+   cd nuxt-starter-kit
 ```
 
 2. **Install Dependencies**: Install the project dependencies using npm or yarn.
@@ -71,6 +71,5 @@ For detailed information about using the various features and technologies in th
 
 We welcome contributions from the community! If you encounter any issues or have suggestions for improvements, feel free to open an issue or submit a pull request on the repository.
 
----
 
 Happy coding! 🚀
